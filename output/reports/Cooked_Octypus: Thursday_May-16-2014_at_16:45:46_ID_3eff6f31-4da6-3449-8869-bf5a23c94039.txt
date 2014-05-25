@@ -1,0 +1,10 @@
+  >>> BEGIN RESULTS FOR very_tiny_perf_test using firefox v. 18 on Linux <<< 
+
+1 scenario (1 passed)
+16 steps (16 passed) 
+4m23.757s 
+ 
+ 
+  >>> END RESULTS FOR very_tiny_perf_test using firefox v. 18 on Linux <<<  
+ 
+           >>>>> PASSED <<<<<

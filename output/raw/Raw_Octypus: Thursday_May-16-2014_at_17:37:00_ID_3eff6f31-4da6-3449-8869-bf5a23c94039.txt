@@ -1,0 +1,61 @@
+
+
+  >>> BEGIN RESULTS FOR very_tiny_perf_test using firefox v. 18 on Linux <<< 
+
+
+
+
+Your current directory doesn't look right; putting you in /var/local/deploy/gless ; if that's not what you wanted, you want to clone qa-automation, and be in the gless dir.
+
+
+
+@utility
+Feature: Utility Scenarios
+
+  @very_tiny_perf_test
+  Scenario: Run Very Basic Cytoweb Performance Test                    # features/cytobank/utility.feature:19
+    Given I have configuration data for the requested server           # features/support/step_definitions/cytobank_steps.rb:3
+    And I have the experiment data for 'u937'                          # features/support/step_definitions/experiment_steps/login.rb:1
+    And I start the test framework                                     # features/support/step_definitions/cytobank_steps.rb:8
+    When I select my login server                                      # features/support/step_definitions/cytobank_steps.rb:26
+    And I log in                                                       # features/support/step_definitions/cytobank_steps.rb:30
+    Then I am on the experiments page                                  # features/support/step_definitions/experiment_steps/login.rb:43
+    Given I have enough credits                                        # features/support/step_definitions/experiment_steps/check_credits.rb:1
+    And I open the experiment                                          # features/support/step_definitions/experiment_steps/open_experiment.rb:1
+    When I clone the experiment                                        # features/support/step_definitions/experiment_steps/open_experiment.rb:9
+      Net::ReadTimeout (Net::ReadTimeout)
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/protocol.rb:158:in `rescue in rbuf_fill'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/protocol.rb:152:in `rbuf_fill'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/protocol.rb:134:in `readuntil'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/protocol.rb:144:in `readline'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http/response.rb:39:in `read_status_line'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http/response.rb:28:in `read_new'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:1406:in `block in transport_request'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:1403:in `catch'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:1403:in `transport_request'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:1376:in `request'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:1369:in `block in request'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:852:in `start'
+      /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:1367:in `request'
+      ./lib/pages/cytobank/experiment_page.rb:49:in `clone_experiment'
+      ./lib/cytobank.rb:36:in `method_missing'
+      ./features/support/step_definitions/experiment_steps/open_experiment.rb:10:in `/^I\ clone\ the\ experiment$/'
+      features/cytobank/utility.feature:31:in `When I clone the experiment'
+    Then I am certain that the experiment got cloned                   # features/support/step_definitions/experiment_steps/open_experiment.rb:13
+    Given I open the edit experiment form                              # features/support/step_definitions/experiment_steps/open_experiment.rb:38
+    When I change the experiment name to start with "Performance Test" # features/support/step_definitions/experiment_steps/open_experiment.rb:42
+    Then The experiment name begins with "Performance Test"            # features/support/step_definitions/experiment_steps/open_experiment.rb:47
+    When I delete the experiment                                       # features/support/step_definitions/perf_steps/delete_experiment.rb:1
+    Then I am on the experiments page                                  # features/support/step_definitions/experiment_steps/login.rb:43
+    Then I sign out                                                    # features/support/step_definitions/experiment_steps/logout.rb:1
+
+Failing Scenarios:
+cucumber features/cytobank/utility.feature:19 # Scenario: Run Very Basic Cytoweb Performance Test
+
+1 scenario (1 failed)
+16 steps (1 failed, 7 skipped, 8 passed)
+3m26.069s
+
+
+  >>> END RESULTS FOR very_tiny_perf_test using firefox v. 18 on Linux <<< 
+

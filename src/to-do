@@ -1,0 +1,18 @@
+* FIX:
+
+Filtering issues.
+
+
+* ADD:
+
+Command line arguments
+Selectable 'levels of detail' for output reports?
+Suppress shell output? As an option?
+Benchmarking when debugging is active
+
+
+* REFACTOR:
+
+Oh, just everything. There's so much code duplication it hurts.
+Curry off all the date handling so we can skip duplicating formatting issues
+

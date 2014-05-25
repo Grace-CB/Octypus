@@ -1,0 +1,16 @@
+# Hi! This file controls multiplatform.pl's behavior in terms of what browser/OS it'll use to run the automated test.
+#
+# Adding something should be done like so:
+#
+# - - browser
+#   - OS
+#   - 'version'
+#
+# The version number is for the browser. CHECK THESE WITH SAUCE'S WEBSITE BEFORE YOU ADD SOME.  There are quirky names, be aware.
+#
+
+---
+- - firefox
+  - Linux
+  - '18'
+

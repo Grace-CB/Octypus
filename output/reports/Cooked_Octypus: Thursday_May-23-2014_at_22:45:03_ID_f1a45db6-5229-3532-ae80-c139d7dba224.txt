@@ -1,0 +1,11 @@
+  >>> BEGIN RESULTS FOR very_tiny_perf_test using firefox v. 18 on Linux on 4-22-2014 at 22:3 <<< 
+
+  >>> END RESULTS FOR very_tiny_perf_test using firefox v. 18 on Linux started on 4-22-2014 at 22:3 <<< 
+           >>>>> very_tiny_perf_test using firefox v. 18 on Linux: PASSED <<<<<
+
+  ************************************************************************************************************************ 
+  >> FINAL REPORT FOR f1a45db6-5229-3532-ae80-c139d7dba224 on Thursday_May-23-2014 at 22:45:03 << 
+  ************************************************************************************************************************ 
+  We did exactly the number of indicated tests: 1 
+
+           >>>>> very_tiny_perf_test using firefox v. 18 on Linux: PASSED <<<<<

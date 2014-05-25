@@ -1,0 +1,4 @@
+test: very_tiny_perf_test
+server: qa03
+iterate: 1
+

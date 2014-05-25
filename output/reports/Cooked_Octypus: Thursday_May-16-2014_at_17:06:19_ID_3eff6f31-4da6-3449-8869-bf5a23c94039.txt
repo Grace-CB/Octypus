@@ -1,0 +1,18 @@
+  >>> BEGIN RESULTS FOR very_tiny_perf_test using firefox v. 18 on Linux <<< 
+
+    When I clone the experiment                                        # features/support/step_definitions/experiment_steps/open_experiment.rb:9 
+
+Failing Scenarios:
+cucumber features/cytobank/utility.feature:19 # Scenario: Run Very Basic Cytoweb Performance Test 
+ 
+1 scenario (1 failed)
+16 steps (1 failed, 7 skipped, 8 passed) 
+3m25.457s 
+ 
+ 
+  >>> END RESULTS FOR very_tiny_perf_test using firefox v. 18 on Linux <<<  
+ 
+           >>>>> very_tiny_perf_test using firefox v. 18 on Linux: FAILED <<<<<
+ >> FINAL REPORT FOR 3eff6f31-4da6-3449-8869-bf5a23c94039 on Thursday_May-16-2014 at 17:06:19 << 
+
+           >>>>> very_tiny_perf_test using firefox v. 18 on Linux: FAILED <<<<<
