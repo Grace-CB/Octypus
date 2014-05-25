@@ -1,6 +1,6 @@
 * FIX:
 
-Filtering issues.
+Filtering issues. Solved, at least practically, for the moment. Need to test with more robust range of outputs.
 
 
 * ADD:
@@ -8,11 +8,11 @@ Filtering issues.
 Command line arguments
 Selectable 'levels of detail' for output reports?
 Suppress shell output? As an option?
-Benchmarking when debugging is active
+Benchmarking when debugging is active (Benchmark module)
 
 
 * REFACTOR:
 
 Oh, just everything. There's so much code duplication it hurts.
 Curry off all the date handling so we can skip duplicating formatting issues
-
+Curry off just everything we can. Seriously -- the date handling, duh, but formatting stuff, maybe even filehandle stuff.
